@@ -26,7 +26,7 @@ def create_person(): # this function creates the objects (name and age) and allo
 def display_people(): #This line defines display_people function and is called when the program is run, which prints out the details of each Person object in the list.
     people = create_person() # this line calls the create_person function, which prompts the user to input names and ages for six people
     body_style = "background-color: #f0f0f0; margin: 0;"  # Adjust background color and remove default margin
-    header_html = "<h1 style='background-color: #f0f0f0; color: #000080; text-align: center; margin: 20;'>People Data</h1>"
+    header_html = "<h1 style='background-color: #f0f0f0; color: #000080; text-align: center; margin: 20;'>People Data</h1>"  # HTML for the header with centered text and specified margin
     people_list_html = "<ul style='background-color: #f0f0f0; color: #000080; text-align: center; list-style-type: none; padding-left: 0; margin: 0;'>" # initializes an HTML unordered list to hold the people data
     for person in people: #this line is saying that for every object in the people list, print said object which are the name and age
         people_list_html += f"<li>{person}</li>" # adds each person's string representation as a list item in the HTML list
