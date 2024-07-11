@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% block title %} BMI Converter {% endblock %}
+{% block content %}
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col - md-6" >
+            <h1 class = "mt -4"> BMI Converter</h1>
+    </div>
+</div>
+
+<div>
+    {% from 'bootstrap5/form.html' import render_form %}{{form.csrf_token}}
+    {{render_form(form)}}
+</div>
+
+{% if bmi %}
+<div class="row mt-5">
+    <div class = "BMI">
+        <h2> Answer: {{ bmi }} </h2>
+    </div>
+</div>
+
+
+{% endif %} {% endblock %}
